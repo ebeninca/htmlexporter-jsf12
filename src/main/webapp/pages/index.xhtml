@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:e="http://www.dataprev.gov.br/htmlexporter">
+
+<title>Exporter</title>
+
+<body>
+
+	<h2>DataTable Example</h2>
+
+	<f:view>
+		<h:form>
+			<h:dataTable id="tbl" value="#{userData.employees}" var="employee"
+				styleClass="employeeTable" headerClass="employeeTableHeader"
+				rowClasses="employeeTableOddRow,employeeTableEvenRow">
+
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Name" />
+					</f:facet>
+					<h:outputText value="#{employee.name}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Department" />
+					</f:facet>
+					<h:outputText value="#{employee.department}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Age" />
+					</f:facet>
+					<h:outputText value="#{employee.age}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Salary" />
+					</f:facet>
+					<h:outputText value="#{employee.salary}" />
+				</h:column>
+			</h:dataTable>
+
+			<br />
+			<br />
+			<br />
+
+			<h:dataTable id="tbl2" value="#{userData.employees}" var="employee"
+				styleClass="employeeTable" headerClass="employeeTableHeader"
+				rowClasses="employeeTableOddRow,employeeTableEvenRow">
+
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Name" />
+					</f:facet>
+					<h:outputText value="#{employee.name}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Department" />
+					</f:facet>
+					<h:outputText value="#{employee.department}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Age" />
+					</f:facet>
+					<h:outputText value="#{employee.age}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Salary" />
+					</f:facet>
+					<h:outputText value="#{employee.salary}" />
+				</h:column>
+			</h:dataTable>
+
+			<h:commandLink ajax="false">
+				<h:graphicImage value="/images/pdf.png" />
+				<e:dataExporter type="pdf" target="tbl,tbl2" fileName="employee"
+					cellFontSize="20" facetFontSize="16" facetBackground="#F88017"
+					facetFontColor="#0000ff" />
+			</h:commandLink>
+
+			<h:commandLink>
+				<h:graphicImage value="/images/xls.png" />
+				<e:dataExporter type="xlsx" target="tbl,tbl2" fileName="employee"
+					cellFontSize="20" facetFontSize="16" facetBackground="#F88017"
+					facetFontColor="#0000ff" />
+			</h:commandLink>
+
+			<h:commandLink>
+				<h:graphicImage value="/images/csv.png" />
+				<e:dataExporter type="csv" target="tbl,tbl2" fileName="employee"
+					cellFontSize="20" facetFontSize="16" facetBackground="#F88017"
+					facetFontColor="#0000ff" />
+			</h:commandLink>
+
+			<h:commandLink>
+				<h:graphicImage value="/images/xml.png" />
+				<e:dataExporter type="xml" target="tbl,tbl2" fileName="employee"
+					cellFontSize="20" facetFontSize="16" facetBackground="#F88017"
+					facetFontColor="#0000ff" />
+			</h:commandLink>
+
+		</h:form>
+	</f:view>
+</body>
+</html>

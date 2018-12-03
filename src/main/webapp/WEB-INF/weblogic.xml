@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://xmlns.oracle.com/weblogic/weblogic-web-app http://xmlns.oracle.com/weblogic/weblogic-web-app/1.4/weblogic-web-app.xsd">
+
+	<weblogic-version>12.1.1</weblogic-version>
+
+	<context-root>htmlexporter</context-root>
+
+	<session-descriptor>
+		<cookies-enabled>true</cookies-enabled>
+		<cookie-http-only>false</cookie-http-only>
+		<persistent-store-type>replicated_if_clustered</persistent-store-type>
+	</session-descriptor>
+
+	<container-descriptor>
+		<prefer-application-packages>
+			<package-name>javax.faces.*</package-name>
+			<package-name>com.sun.faces.*</package-name>
+			<package-name>com.bea.faces.*</package-name>
+			<package-name>com.sun.facelets.*</package-name>
+		</prefer-application-packages>
+
+		<prefer-application-resources>
+			<resource-name>javax.faces.*</resource-name>
+			<resource-name>com.sun.faces.*</resource-name>
+			<resource-name>com.bea.faces.*</resource-name>
+			<resource-name>com.sun.facelets.*</resource-name>
+			<resource-name>META-INF/services/javax.servlet.ServletContainerInitializer</resource-name>
+			<resource-name>META-INF/services/javax.xml.ws.spi.Provider</resource-name>
+		</prefer-application-resources>
+	</container-descriptor>
+
+</weblogic-web-app>
