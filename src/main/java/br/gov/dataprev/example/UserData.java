@@ -1,4 +1,4 @@
-package br.gov.dataprev.htmlexporter.example;
+package br.gov.dataprev.example;
 
 import java.io.Serializable;
 import java.util.ArrayList;

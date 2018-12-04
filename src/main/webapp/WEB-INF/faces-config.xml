@@ -15,7 +15,7 @@
 
 	<managed-bean>
 		<managed-bean-name>userData</managed-bean-name>
-		<managed-bean-class>br.gov.dataprev.htmlexporter.example.UserData</managed-bean-class>
+		<managed-bean-class>br.gov.dataprev.example.UserData</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 

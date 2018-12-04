@@ -1,4 +1,4 @@
-package br.gov.dataprev.htmlexporter.example;
+package br.gov.dataprev.example;
 
 public class Employee {
 	private String name;
